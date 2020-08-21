@@ -1,20 +1,14 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" 
-	  xmlns:th="http://www.thymeleaf.org">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{LayoutPadrao}">
 <head>
-<meta charset="UTF-8"/>
-<title>Cadastro de Título</title>
-<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css"/>
-<link rel="stylesheet" type="text/css" href="/css/style.css"/>
+	<title>Cadastro de Título</title>
 </head>
-<body>
-    
-	<nav class="navbar navbar-dark bg-dark mb-5">
-  		<a class="navbar-brand" href="#">
-        	<img alt="AlgaWorks" src="/images/logo-algaworks.png" />
-        </a>
-	</nav>
-    
+
+<body>    
+<section layout:fragment="corpo">    
     <form class="form-horizontal" method="POST" action="/titulos">
     
     	<div class="alert alert-success" th:if="${!#strings.isEmpty(mensagem)}">
@@ -23,7 +17,10 @@
     
     	<div class="card">
     		<div class="card-header">
-    			<h4 class="card-title">Novo título</h4>
+    			<div class="clearfix">
+    				<h4 class="card-title float-left">Novo título</h4>
+    				<a class="btn btn-link float-right" href="/titulos">Voltar para pesquisa</a>
+    			</div>
     		</div>
     		
     		<div class="card-body">
@@ -61,10 +58,6 @@
 			</div>
     	</div>
     </form>
-
-	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-	<script src="/js/bootstrap.min.js"></script>
+</section>
 </body>
-
 </html>
