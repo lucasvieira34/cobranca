@@ -40,7 +40,9 @@
       						th:classappend="${(titulo.pendente) ? 'badge-danger' :  'badge-success'}"></span>
       					</td>
       					<td class="text-center">
-      					
+      						<a th:href="@{'/titulos/' + ${titulo.codigo}}">
+      							<i class="fas fa-fw fa-edit"></i>
+      						</a>
       					</td>
       				</tr>
       				<tr>
