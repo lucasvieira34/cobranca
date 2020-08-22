@@ -45,10 +45,10 @@
       						th:classappend="${(titulo.pendente) ? 'badge-danger' :  'badge-success'}"></span>
       					</td>
       					<td class="text-center">
-      						<a th:href="@{'/titulos/' + ${titulo.codigo}}">
+      						<a th:href="@{'/titulos/' + ${titulo.codigo}}" title="Editar" rel="tooltip" data-placement="top">
       							<i class="fas fa-fw fa-edit"></i>
       						</a>
-      						<a class="btn btn-link" data-toggle="modal" data-target="#confirmacaoExclusaoModal" th:attr="data-codigo=${titulo.codigo}, data-descricao=${titulo.descricao}">
+      						<a class="btn btn-link" data-toggle="modal" data-target="#confirmacaoExclusaoModal" th:attr="data-codigo=${titulo.codigo}, data-descricao=${titulo.descricao}" title="Excluir" rel="tooltip" data-placement="top">
       							<i class="fas fa-fw fa-times"></i>
       						</a>
       					</td>
