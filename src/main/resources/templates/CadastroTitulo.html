@@ -55,7 +55,7 @@
 				<div class="form-group row">
 					<label for="status" class="col-sm-2 offset-md-1 control-form-label font-weight-bold">Status</label>
 					<div class="col-sm-2">
-						<select class="form-control" name="status">
+						<select class="form-control" name="status" th:field="*{status}">
 							<option th:each="status : ${todosStatusTitulo}" th:value="${status}" th:text="${status.descricao}"></option>
                     	</select>
                     </div>
