@@ -42,7 +42,8 @@
 				<div class="form-group row">
 					<label for="dataVencimento" class="col-sm-2 offset-md-1 control-form-label font-weight-bold">Data de Vencimento</label>
 					<div class="col-sm-2">  
-						<input type="text" class="form-control"	id="dataVencimento" th:field="*{dataVencimento}" th:classappend="${#fields.hasErrors('dataVencimento')}? 'is-invalid':''">
+						<input type="text" class="form-control"	id="dataVencimento" th:field="*{dataVencimento}" th:classappend="${#fields.hasErrors('dataVencimento')}? 'is-invalid':''"
+						data-provide="datepicker" data-date-format="dd/mm/yyyy" data-date-language="pt-BR" data-date-autoclose="true" data-date-today-highlight="true" data-date-orientation="top">
 					</div>
 				</div>
 				<div class="form-group row">
