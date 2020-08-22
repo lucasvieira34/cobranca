@@ -1,13 +1,15 @@
+/* Tela grande */
+@media (min-width: 768px) {
+	.card {
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	
+	.alert {
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+}
 .navbar-brand {
 	padding-top: 12px;
-}
-
-.card {
-	margin-left: 10px;
-	margin-right: 10px;
-}
-
-.alert {
-	margin-left: 10px;
-	margin-right: 10px;
 }
