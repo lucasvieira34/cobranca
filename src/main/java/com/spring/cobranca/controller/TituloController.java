@@ -18,6 +18,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.spring.cobranca.model.StatusTitulo;
 import com.spring.cobranca.model.Titulo;
+import com.spring.cobranca.repository.TituloFilter;
 import com.spring.cobranca.repository.TituloRepository;
 import com.spring.cobranca.service.CadastroTituloService;
 
@@ -55,8 +56,8 @@ public class TituloController {
 	}
 	
 	@RequestMapping
-	public ModelAndView pesquisar() {
-		List<Titulo> todosTitulos = tituloRepository.findAll();
+	public ModelAndView pesquisar(@ModelAttribute("filtro") TituloFilter filtro) {
+		List<Titulo> todosTitulos = cadastroTituloService.filtrar(filtro);		
 		ModelAndView mv = new ModelAndView("PesquisaTitulos");
 		mv.addObject("titulos", todosTitulos);
 		return mv;

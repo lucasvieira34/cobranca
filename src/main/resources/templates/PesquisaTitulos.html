@@ -24,13 +24,13 @@
       	
       	<div class="card-body">
       	
-      		<form method="GET" class="form-horizontal" action="">
+      		<form method="GET" class="form-horizontal" action="/titulos" th:object="${filtro}">
 	      		<div class="form-group">
 	      			<div class="col-sm-4">
 		      			<div class="input-group">
-						  <input type="text" class="form-control" placeholder="Qual título você está procurando?" autofocus="autofocus">
+						  <input type="text" class="form-control" placeholder="Qual título você está procurando?" autofocus="autofocus" th:field="*{descricao}">
 						  <div class="input-group-append">
-						    <button class="btn btn-dark" type="button">
+						    <button class="btn btn-dark" type="submit">
 						    	<i class="fas fa-fw fa-search"></i>
 						    </button>
 						  </div>
